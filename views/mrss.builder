@@ -1,9 +1,9 @@
 xml.instruct! :rss, :version => '2.0', :'xmlns:media' => 'http://search.yahoo.com/mrss/'
 
 xml.channel do
-  xml.title "hi"
-  xml.link "http://localhost:9393"
-  xml.description ""
+  xml.title @directory
+  xml.link "http://#{request.host}:#{request.port}"
+  xml.description "Generted by Syndicate"
   
   @videos.each do |v|
     xml.item do

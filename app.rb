@@ -12,10 +12,10 @@ module Syndicate
     end  
     
     get '/d/*' do
-      directory = File.join('/', params[:splat][0], '*')
+      @directory = File.join('/', params[:splat][0], '*')
           
-      files   = Dir[directory].select { |file| !File.directory? file }      
-      @videos = files.map { |file| Video.from_path(file) } 
+      files   = Dir[@directory].select { |file| !File.directory? file }      
+      @videos = files.map { |file| Video.from_path(file) }.compact
       
       builder :mrss
     end
