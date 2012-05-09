@@ -3,7 +3,7 @@ require 'uri'
 class Video
   attr_reader :title, :description, :thumbnail, :path
   
-  VALID_EXTENSIONS = ['.mp4', '.MP4']
+  VALID_EXTENSIONS = ['.mp4', '.avi', '.mkv']
   
   def self.from_path(path)
     if valid_extension? path    
@@ -31,7 +31,7 @@ class Video
   end
   
   def self.valid_extension?(path)
-    VALID_EXTENSIONS.include? File.extname(path)
+    VALID_EXTENSIONS.include? File.extname(path).downcase
   end    
 end
   
