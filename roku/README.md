@@ -2,10 +2,9 @@
 
 ## Setup
 
-1. Get Pegtv Player ID# from the PEG.TV CMS.
-1. Change url variable in appMain.brs to point to this ID#
+1. Change url variable in appMain.brs to point to your Syndicate server.
 1. Edit manifest and change Title and Subtitle accordingly.
-1. Edit Makefile and change Appname accordingly. (This is just the name of the app the roku uses internally for development.)
+1. Edit Makefile and change Appname accordingly. 
 
 ## Graphics
 
@@ -23,9 +22,3 @@ Roku must first be set to development mode.
 export ROKU_DEV_TARGET=<ip_address_of_roku>
 make install
 ```
-
-## Development
-
-*  Only commit changes that apply to all branches to master branch. 
-*  Create a new branch for every new account application. 
-*  Merge necessary changes from master to the branches that need the global changes. 
