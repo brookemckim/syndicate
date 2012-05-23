@@ -4,7 +4,7 @@ require File.expand_path('../lib/syndicate/version', __FILE__)
 Gem::Specification.new do |gem|
   gem.authors       = ["brookemckim"]
   gem.email         = ["brooke.mckim@gmail.com"]
-  gem.description   = %q{TODO: Write a gem description}
+  gem.description   = %q{Easily watch videos hosted on your computer on any OTT device that can consume a MRSS feed.}
   gem.summary       = %q{Publish any directory as an MRSS feed.}
   gem.homepage      = "http://github.com/brookemckim/syndicate"
 
