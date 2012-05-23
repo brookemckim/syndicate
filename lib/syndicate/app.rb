@@ -1,14 +1,24 @@
 require 'sinatra/base'
-require 'lib/video'
 require 'builder'
+require 'puma'
+
+APP_ROOT ||= File.expand_path( File.dirname(__FILE__) )
+require APP_ROOT + '/lib/video'
 
 module Syndicate
   class App < Sinatra::Base
+    
+    set :server, :puma
+    set :port, 3000
     
     helpers do
       def url_from_path(path)
         URI.encode "http://#{request.host}:#{request.port}/v#{path}"
       end  
+    end  
+    
+    get '/' do
+      "Syndicate : MRSS Publishing"
     end  
     
     get '/d/*' do

@@ -1,10 +1,4 @@
-source :rubygems
+source 'https://rubygems.org'
 
-gem 'sinatra', '~> 1.3.2'
-gem 'puma',    '~> 1.3.0'
-
-gem 'builder'
-
-group :development do
-  gem 'shotgun'
-end  
+# Specify your gem's dependencies in syndicate.gemspec
+gemspec
